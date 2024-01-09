@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 import "package:flutterviz/SleepScreen.dart";
+import 'food.dart';
+import 'water.dart';
+import 'social.dart';
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -168,7 +171,10 @@ class HomeScreen extends StatelessWidget {
                                 padding: EdgeInsets.fromLTRB(177, 0, 0, 0),
                                 child: IconButton(
                                   icon: Icon(Icons.arrow_forward_ios),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => food()));
+
+                                  },
                                   color: Color(0xff212435),
                                   iconSize: 15,
                                 ),
@@ -219,7 +225,9 @@ class HomeScreen extends StatelessWidget {
                                 padding: EdgeInsets.fromLTRB(170, 0, 0, 0),
                                 child: IconButton(
                                   icon: Icon(Icons.arrow_forward_ios),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => water()));
+                                  },
                                   color: Color(0xff212435),
                                   iconSize: 15,
                                 ),
@@ -270,7 +278,10 @@ class HomeScreen extends StatelessWidget {
                                 padding: EdgeInsets.fromLTRB(168, 0, 0, 0),
                                 child: IconButton(
                                   icon: Icon(Icons.arrow_forward_ios),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => social()));
+
+                                  },
                                   color: Color(0xff212435),
                                   iconSize: 15,
                                 ),
