@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-class social extends StatelessWidget {
+class food extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,7 +56,7 @@ class social extends StatelessWidget {
               child: Container(
                 margin: EdgeInsets.all(0),
                 padding: EdgeInsets.all(0),
-                width: 2000,
+                width: 200,
                 height: 100,
                 decoration: BoxDecoration(
                   color: Color(0x00000000),
@@ -71,7 +71,7 @@ class social extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
                       child: Text(
-                        "Social Battery:",
+                        "Type of Food:",
                         textAlign: TextAlign.start,
                         overflow: TextOverflow.clip,
                         style: TextStyle(
@@ -87,7 +87,7 @@ class social extends StatelessWidget {
                       child: Container(
                         margin: EdgeInsets.all(0),
                         padding: EdgeInsets.all(0),
-                        width: 2500,
+                        width: 150,
                         height: 100,
                         decoration: BoxDecoration(
                           color: Color(0x00000000),
@@ -100,56 +100,7 @@ class social extends StatelessWidget {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Expanded(
-                                    flex: 1,
-                                    child: Text(
-                                      "Bad",
-                                      textAlign: TextAlign.start,
-                                      overflow: TextOverflow.clip,
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontStyle: FontStyle.normal,
-                                        fontSize: 14,
-                                        color: Color(0xff000000),
-                                      ),
-                                    ),
-                                  ),
-                                  Container(
-                                    width: 170,
-                                    child: Slider(
-                                      onChanged: (value) {},
-                                      value: 0,
-                                      min: 0,
-                                      max: 10,
-                                      activeColor: Color(0xff3a57e8),
-                                      inactiveColor: Color(0xff9e9e9e),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    flex: 1,
-                                    child: Text(
-                                      "Good",
-                                      textAlign: TextAlign.start,
-                                      overflow: TextOverflow.clip,
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontStyle: FontStyle.normal,
-                                        fontSize: 14,
-                                        color: Color(0xff000000),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
+                              padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
                               child: MaterialButton(
                                 onPressed: () {},
                                 color: Color(0xffffffff),
@@ -161,7 +112,7 @@ class social extends StatelessWidget {
                                 ),
                                 padding: EdgeInsets.all(16),
                                 child: Text(
-                                  "Button",
+                                  "Full Meal",
                                   style: TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w400,
@@ -172,6 +123,53 @@ class social extends StatelessWidget {
                                 height: 40,
                                 minWidth: 140,
                               ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                              child: MaterialButton(
+                                onPressed: () {},
+                                color: Color(0xffffffff),
+                                elevation: 0,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.zero,
+                                  side: BorderSide(
+                                      color: Color(0xff808080), width: 1),
+                                ),
+                                padding: EdgeInsets.all(16),
+                                child: Text(
+                                  "Snack",
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    fontStyle: FontStyle.normal,
+                                  ),
+                                ),
+                                textColor: Color(0xff000000),
+                                height: 40,
+                                minWidth: 140,
+                              ),
+                            ),
+                            MaterialButton(
+                              onPressed: () {},
+                              color: Color(0xff0fb821),
+                              elevation: 0,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.zero,
+                                side: BorderSide(
+                                    color: Color(0xff057a0f), width: 1),
+                              ),
+                              padding: EdgeInsets.all(16),
+                              child: Text(
+                                "submit",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400,
+                                  fontStyle: FontStyle.normal,
+                                ),
+                              ),
+                              textColor: Color(0xff000000),
+                              height: 40,
+                              minWidth: 160,
                             ),
                           ],
                         ),
