@@ -173,7 +173,6 @@ class HomeScreen extends StatelessWidget {
                                   icon: Icon(Icons.arrow_forward_ios),
                                   onPressed: () {
                                     Navigator.push(context, MaterialPageRoute(builder: (context) => food()));
-
                                   },
                                   color: Color(0xff212435),
                                   iconSize: 15,

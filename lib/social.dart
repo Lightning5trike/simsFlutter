@@ -24,10 +24,12 @@ class social extends StatelessWidget {
             color: Color(0xff000000),
           ),
         ),
-        leading: Icon(
-          Icons.arrow_back,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
           color: Color(0xff212435),
-          size: 24,
+          onPressed: (){
+            Navigator.pop(context);
+          },
         ),
       ),
       body: Padding(
@@ -54,7 +56,7 @@ class social extends StatelessWidget {
               child: Container(
                 margin: EdgeInsets.all(0),
                 padding: EdgeInsets.all(0),
-                width: 200,
+                width: 2000,
                 height: 100,
                 decoration: BoxDecoration(
                   color: Color(0x00000000),
@@ -85,7 +87,7 @@ class social extends StatelessWidget {
                       child: Container(
                         margin: EdgeInsets.all(0),
                         padding: EdgeInsets.all(0),
-                        width: 150,
+                        width: 2500,
                         height: 100,
                         decoration: BoxDecoration(
                           color: Color(0x00000000),
@@ -97,59 +99,79 @@ class social extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisSize: MainAxisSize.max,
                           children: [
-                            Container(
-                              width: 160,
-                              height: 50,
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 4, horizontal: 8),
-                              decoration: BoxDecoration(
-                                color: Color(0xffffffff),
-                                borderRadius: BorderRadius.circular(0),
-                              ),
-                              child: DropdownButton(
-                                value: "Option 1",
-                                items: [
-                                  "full battery",
-                                  "partial battery",
-                                  "drained"
-                                ].map<DropdownMenuItem<String>>((String value) {
-                                  return DropdownMenuItem<String>(
-                                    value: value,
-                                    child: Text(value),
-                                  );
-                                }).toList(),
-                                style: TextStyle(
-                                  color: Color(0xff000000),
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w400,
-                                  fontStyle: FontStyle.normal,
-                                ),
-                                onChanged: (value) {},
-                                elevation: 8,
-                                isExpanded: true,
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Expanded(
+                                    flex: 1,
+                                    child: Text(
+                                      "Bad",
+                                      textAlign: TextAlign.start,
+                                      overflow: TextOverflow.clip,
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w400,
+                                        fontStyle: FontStyle.normal,
+                                        fontSize: 14,
+                                        color: Color(0xff000000),
+                                      ),
+                                    ),
+                                  ),
+                                  Container(
+                                    width: 170,
+                                    child: Slider(
+                                      onChanged: (value) {},
+                                      value: 0,
+                                      min: 0,
+                                      max: 10,
+                                      activeColor: Color(0xff3a57e8),
+                                      inactiveColor: Color(0xff9e9e9e),
+                                    ),
+                                  ),
+                                  Expanded(
+                                    flex: 1,
+                                    child: Text(
+                                      "Good",
+                                      textAlign: TextAlign.start,
+                                      overflow: TextOverflow.clip,
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w400,
+                                        fontStyle: FontStyle.normal,
+                                        fontSize: 14,
+                                        color: Color(0xff000000),
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
-                            MaterialButton(
-                              onPressed: () {},
-                              color: Color(0xff0fb821),
-                              elevation: 0,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.zero,
-                                side: BorderSide(
-                                    color: Color(0xff057a0f), width: 1),
-                              ),
-                              padding: EdgeInsets.all(16),
-                              child: Text(
-                                "submit",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w400,
-                                  fontStyle: FontStyle.normal,
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
+                              child: MaterialButton(
+                                onPressed: () {},
+                                color: Color(0xffffffff),
+                                elevation: 0,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.zero,
+                                  side: BorderSide(
+                                      color: Color(0xff808080), width: 1),
                                 ),
+                                padding: EdgeInsets.all(16),
+                                child: Text(
+                                  "Button",
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    fontStyle: FontStyle.normal,
+                                  ),
+                                ),
+                                textColor: Color(0xff000000),
+                                height: 40,
+                                minWidth: 140,
                               ),
-                              textColor: Color(0xff000000),
-                              height: 40,
-                              minWidth: 160,
                             ),
                           ],
                         ),
