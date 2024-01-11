@@ -3,6 +3,9 @@
 import 'package:flutter/material.dart';
 
 class SleepScreen extends StatelessWidget {
+  final TextEditingController timer = TextEditingController();
+  final TextEditingController date = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -102,7 +105,7 @@ class SleepScreen extends StatelessWidget {
                             Padding(
                               padding: EdgeInsets.fromLTRB(15, 10, 15, 20),
                               child: TextField(
-                                controller: TextEditingController(),
+                                controller: timer,
                                 obscureText: false,
                                 textAlign: TextAlign.start,
                                 maxLines: 1,
@@ -160,7 +163,7 @@ class SleepScreen extends StatelessWidget {
                             Padding(
                               padding: EdgeInsets.fromLTRB(15, 0, 15, 20),
                               child: TextField(
-                                controller: TextEditingController(),
+                                controller: date,
                                 obscureText: false,
                                 textAlign: TextAlign.start,
                                 maxLines: 1,
