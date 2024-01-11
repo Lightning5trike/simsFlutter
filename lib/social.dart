@@ -161,7 +161,7 @@ class social extends StatelessWidget {
                                 ),
                                 padding: EdgeInsets.all(16),
                                 child: Text(
-                                  "Button",
+                                  "Submit",
                                   style: TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w400,
