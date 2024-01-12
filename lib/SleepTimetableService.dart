@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterviz/sleepTimetable.dart';
+import 'sleepTimetable.dart';
 import 'package:hive/hive.dart';
 
 class SleepTimetableService {
@@ -15,6 +15,11 @@ class SleepTimetableService {
   Future<void> addDate(SleepTimetable date) async {
     var box = await _box;
     await box.add(date);
+  }
+
+  Future<void> deleteTime(int index) async {
+    var box = await _box;
+    await box.deleteAt(index);
   }
 
   Future<List<SleepTimetable>> getAllData() async {

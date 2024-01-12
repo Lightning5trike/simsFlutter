@@ -1,10 +1,13 @@
-///File download from FlutterViz- Drag and drop a tools. For more details visit https://flutterviz.io/
-
 import 'package:flutter/material.dart';
+import 'package:flutterviz/NewScreen.dart';
+import 'package:flutterviz/sleepTimetable.dart';
+
+import 'SleepTimetableService.dart';
 
 class SleepScreen extends StatelessWidget {
   final TextEditingController timer = TextEditingController();
   final TextEditingController date = TextEditingController();
+  final SleepTimetableService _sleepTimetableService = SleepTimetableService();
 
   @override
   Widget build(BuildContext context) {
@@ -205,7 +208,11 @@ class SleepScreen extends StatelessWidget {
                               ),
                             ),
                             MaterialButton(
-                              onPressed: () {},
+                              onPressed: () async {
+                                var time =
+                                    SleepTimetable(timer.text, date.text);
+                                await _sleepTimetableService.addTimer(time);
+                              },
                               color: Color(0xff0fb821),
                               elevation: 0,
                               shape: RoundedRectangleBorder(
@@ -229,7 +236,12 @@ class SleepScreen extends StatelessWidget {
                             Padding(
                               padding: EdgeInsets.fromLTRB(0, 40, 0, 0),
                               child: MaterialButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => NewScreen()));
+                                },
                                 color: Color(0xffffffff),
                                 elevation: 0,
                                 shape: RoundedRectangleBorder(

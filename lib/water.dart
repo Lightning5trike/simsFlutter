@@ -1,5 +1,3 @@
-///File download from FlutterViz- Drag and drop a tools. For more details visit https://flutterviz.io/
-
 import 'package:flutter/material.dart';
 
 class water extends StatelessWidget {
@@ -27,7 +25,7 @@ class water extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           color: Color(0xff212435),
-          onPressed: (){
+          onPressed: () {
             Navigator.pop(context);
           },
         ),
@@ -46,7 +44,7 @@ class water extends StatelessWidget {
                 child: LinearProgressIndicator(
                     backgroundColor: Color(0xff808080),
                     valueColor:
-                    new AlwaysStoppedAnimation<Color>(Color(0xff3a57e8)),
+                        new AlwaysStoppedAnimation<Color>(Color(0xff3a57e8)),
                     value: 0.5,
                     minHeight: 45),
               ),

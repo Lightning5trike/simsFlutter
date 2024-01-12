@@ -17,7 +17,7 @@ class SleepTimetableAdapter extends TypeAdapter<SleepTimetable> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return SleepTimetable(
-      fields[0] as double,
+      fields[0] as String,
       fields[1] as String,
     );
   }

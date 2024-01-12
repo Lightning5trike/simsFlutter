@@ -1,10 +1,9 @@
-///File download from FlutterViz- Drag and drop a tools. For more details visit https://flutterviz.io/
-
 import 'package:flutter/material.dart';
-import "package:flutterviz/SleepScreen.dart";
+import 'SleepScreen.dart';
 import 'food.dart';
 import 'water.dart';
 import 'social.dart';
+
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -28,12 +27,11 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         leading: IconButton(
-          icon:Icon(Icons.arrow_back),
+          icon: Icon(Icons.arrow_back),
           color: Color(0xff212435),
-          onPressed: (){
+          onPressed: () {
             Navigator.pop(context);
           },
-
         ),
       ),
       body: Column(
@@ -118,7 +116,11 @@ class HomeScreen extends StatelessWidget {
                                   child: IconButton(
                                     icon: Icon(Icons.arrow_forward_ios),
                                     onPressed: () {
-                                      Navigator.push(context, MaterialPageRoute(builder: (context) => SleepScreen()));
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  SleepScreen()));
                                     },
                                     color: Color(0xff212435),
                                     iconSize: 15,
@@ -172,7 +174,10 @@ class HomeScreen extends StatelessWidget {
                                 child: IconButton(
                                   icon: Icon(Icons.arrow_forward_ios),
                                   onPressed: () {
-                                    Navigator.push(context, MaterialPageRoute(builder: (context) => food()));
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => food()));
                                   },
                                   color: Color(0xff212435),
                                   iconSize: 15,
@@ -225,7 +230,10 @@ class HomeScreen extends StatelessWidget {
                                 child: IconButton(
                                   icon: Icon(Icons.arrow_forward_ios),
                                   onPressed: () {
-                                    Navigator.push(context, MaterialPageRoute(builder: (context) => water()));
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => water()));
                                   },
                                   color: Color(0xff212435),
                                   iconSize: 15,
@@ -278,8 +286,10 @@ class HomeScreen extends StatelessWidget {
                                 child: IconButton(
                                   icon: Icon(Icons.arrow_forward_ios),
                                   onPressed: () {
-                                    Navigator.push(context, MaterialPageRoute(builder: (context) => social()));
-
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => social()));
                                   },
                                   color: Color(0xff212435),
                                   iconSize: 15,
