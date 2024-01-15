@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
               if (snapshot.connectionState == ConnectionState.done) {
                 return HomeScreen();
               } else {
-                return const LinearProgressIndicator(value: 0.5, minHeight: 35);
+                return const CircularProgressIndicator();
               }
             }));
   }

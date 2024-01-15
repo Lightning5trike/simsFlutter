@@ -26,13 +26,13 @@ class HomeScreen extends StatelessWidget {
             color: Color(0xff000000),
           ),
         ),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          color: Color(0xff212435),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
+        // leading: IconButton(
+        //   icon: Icon(Icons.arrow_back),
+        //   color: Color(0xff212435),
+        //   onPressed: () {
+        //     Navigator.pop(context);
+        //   },
+        // ),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
