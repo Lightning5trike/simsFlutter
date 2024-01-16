@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 class food extends StatelessWidget {
   @override
@@ -41,12 +42,14 @@ class food extends StatelessWidget {
               padding: EdgeInsets.fromLTRB(0, 0, 0, 60),
               child: Align(
                 alignment: Alignment.center,
-                child: LinearProgressIndicator(
+                child: LinearPercentIndicator(
+                    animation: true,
+                    animationDuration: 750,
+                    animateFromLastPercent: true,
+                    // progressColor: ,
                     backgroundColor: Color(0xff808080),
-                    valueColor:
-                        new AlwaysStoppedAnimation<Color>(Color(0xff3a57e8)),
-                    value: 0.5,
-                    minHeight: 45),
+                    percent: 0.50,
+                    lineHeight: 45),
               ),
             ),
             Expanded(
@@ -147,28 +150,28 @@ class food extends StatelessWidget {
                                 minWidth: 140,
                               ),
                             ),
-                            MaterialButton(
-                              onPressed: () {},
-                              color: Color(0xff0fb821),
-                              elevation: 0,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.zero,
-                                side: BorderSide(
-                                    color: Color(0xff057a0f), width: 1),
-                              ),
-                              padding: EdgeInsets.all(16),
-                              child: Text(
-                                "submit",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w400,
-                                  fontStyle: FontStyle.normal,
-                                ),
-                              ),
-                              textColor: Color(0xff000000),
-                              height: 40,
-                              minWidth: 160,
-                            ),
+                            // MaterialButton(
+                            //   onPressed: () {},
+                            //   color: Color(0xff0fb821),
+                            //   elevation: 0,
+                            //   shape: RoundedRectangleBorder(
+                            //     borderRadius: BorderRadius.zero,
+                            //     side: BorderSide(
+                            //         color: Color(0xff057a0f), width: 1),
+                            //   ),
+                            //   padding: EdgeInsets.all(16),
+                            //   child: Text(
+                            //     "submit",
+                            //     style: TextStyle(
+                            //       fontSize: 16,
+                            //       fontWeight: FontWeight.w400,
+                            //       fontStyle: FontStyle.normal,
+                            //     ),
+                            //   ),
+                            //   textColor: Color(0xff000000),
+                            //   height: 40,
+                            //   minWidth: 160,
+                            // ),
                           ],
                         ),
                       ),

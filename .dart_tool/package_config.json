@@ -314,6 +314,12 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "percent_indicator",
+      "rootUri": "file:///Users/eliafetta/.pub-cache/hosted/pub.dev/percent_indicator-4.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "platform",
       "rootUri": "file:///Users/eliafetta/.pub-cache/hosted/pub.dev/platform-3.1.4",
       "packageUri": "lib/",
@@ -476,7 +482,7 @@
       "languageVersion": "2.15"
     }
   ],
-  "generated": "2024-01-12T14:52:56.474175Z",
+  "generated": "2024-01-16T17:59:13.565954Z",
   "generator": "pub",
   "generatorVersion": "3.1.3"
 }
